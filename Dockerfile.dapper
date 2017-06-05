@@ -13,10 +13,11 @@ ENV SHELL /bin/bash
 ENV ARTIFACTS /usr/src
 WORKDIR ${DAPPER_SOURCE}
 
-ENV VERSION 2017.02.2-1-uclibc-1.0.17-2
+ENV VERSION 2017.05
+#ENV VERSION 2017.02.2-1-uclibc-1.0.17-3
 ENV TARBALL ${VERSION}.tar.gz
 RUN cd ${ARTIFACTS} && \
-    wget https://github.com/rancher/buildroot/archive/$TARBALL
+    wget https://github.com/buildroot/buildroot/archive/$TARBALL
 
 ARG DAPPER_HOST_ARCH=amd64
 ARG HOST_ARCH=${DAPPER_HOST_ARCH}
